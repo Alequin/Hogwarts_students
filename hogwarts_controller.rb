@@ -5,6 +5,10 @@ require('pry-byebug')
 require_relative('models/student.rb')
 require_relative('models/house.rb')
 
+get("/") do
+  redirect to("/students")
+end
+
 # INDEX
 get "/students" do
   @students = Student.all()
